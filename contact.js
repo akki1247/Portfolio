@@ -16,7 +16,7 @@ exports.handler = async (event, context) => {
     // Set up email data with unicode symbols
     let mailOptions = {
         from: process.env.EMAIL_USER, // Sender address (your email)
-        to: 'recipient_email@example.com', // List of recipients (your email)
+        to: 'shiralshethakshay@gmail.com', // List of recipients (your email)
         subject: `Contact Form Submission: ${subject}`, // Subject line
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}` // Plain text body
     };
