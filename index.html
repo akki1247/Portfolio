@@ -703,7 +703,8 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form name="contact" method="POST" data-netlify="true">
+									<form name="contact" method="POST" data-netlify="true" onSubmit = "submit" data-netlify-honeypot = "bot-field">
+										<input clas = "d-none" name = "bot-field">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -743,28 +744,6 @@
 			
 							</div><!--/.single-contact-box-->
 						</div><!--/.col-->
-											 <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            fetch(this.action, {
-                method: 'POST',
-                body: new FormData(this),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            }).then(response => {
-                if (response.ok) {
-                    alert('Thank you for your message!');
-                    this.reset();
-                } else {
-                    alert('Oops! There was a problem.');
-                }
-            }).catch(error => {
-                alert('Oops! There was a problem.');
-            });
-        });
-    </script>
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-adress">
