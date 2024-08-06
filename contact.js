@@ -1,38 +1,13 @@
-const nodemailer = require('nodemailer');
-
 exports.handler = async (event, context) => {
-    // Parse the body to extract the form fields
+    // Parse the request body
     const { name, email, subject, message } = JSON.parse(event.body);
 
-    // Configure the email transport using your email service provider
-    let transporter = nodemailer.createTransport({
-        service: 'gmail', // Use your email service provider (e.g., 'gmail')
-        auth: {
-            user: process.env.EMAIL_USER, // Your email address
-            pass: process.env.EMAIL_PASS  // Your email password
-        }
-    });
+    // Log the received data (this is optional and for debugging purposes)
+    console.log(`Received contact form submission: ${JSON.stringify({ name, email, subject, message })}`);
 
-    // Set up email data with unicode symbols
-    let mailOptions = {
-        from: process.env.EMAIL_USER, // Sender address (your email)
-        to: 'shiralshethakshay@gmail.com', // List of recipients (your email)
-        subject: `Contact Form Submission: ${subject}`, // Subject line
-        text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}` // Plain text body
+    // Respond with a success message
+    return {
+        statusCode: 200,
+        body: JSON.stringify({ message: 'Form submitted successfully!' })
     };
-
-    try {
-        // Send the email
-        await transporter.sendMail(mailOptions);
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'Message received!' })
-        };
-    } catch (error) {
-        console.error('Error sending email:', error);
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ message: 'Error sending message.' })
-        };
-    }
 };
