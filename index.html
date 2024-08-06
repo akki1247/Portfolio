@@ -703,7 +703,7 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form action="/contact" name ="contact" method="POST">
+									<form name="contact" method="POST" data-netlify="true">
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -738,8 +738,12 @@
 											</div><!--/.col-->
 										</div><!--/.row-->
 									</form><!--/form-->
+									
 								</div><!--/.contact-form-->
-								 <script>
+			
+							</div><!--/.single-contact-box-->
+						</div><!--/.col-->
+											 <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -761,8 +765,6 @@
             });
         });
     </script>
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-adress">
