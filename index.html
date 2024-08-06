@@ -703,8 +703,8 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form name="contact" method="POST" data-netlify="true" onSubmit = "submit" data-netlify-honeypot = "bot-field">
-										<input clas = "d-none" name = "bot-field">
+									<form name="contact" method="POST" data-netlify="true" onSubmit = "submit">
+										
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
 												<div class="form-group">
@@ -739,7 +739,35 @@
 											</div><!--/.col-->
 										</div><!--/.row-->
 									</form><!--/form-->
-									
+									<p id="response-message" style="color:green;"></p>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            
+            const formData = {
+                name: event.target.name.value,
+                email: event.target.email.value,
+                subject: event.target.subject.value,
+                message: event.target.message.value
+            };
+
+            try {
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                document.getElementById('response-message').textContent = result.message;
+                document.getElementById('contact-form').reset();
+            } catch (error) {
+                document.getElementById('response-message').textContent = 'Error submitting the form.';
+                console.error('Error:', error);
+            }
+        });
+    </script>
 								</div><!--/.contact-form-->
 			
 							</div><!--/.single-contact-box-->
