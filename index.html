@@ -703,7 +703,7 @@
 						<div class="col-md-offset-1 col-md-5 col-sm-6">
 							<div class="single-contact-box">
 								<div class="contact-form">
-									<form name="contact" method="POST" data-netlify="true" onSubmit = "submit">
+									<form name="contact" method="POST" data-netlify="true">
 										
 										<div class="row">
 											<div class="col-sm-6 col-xs-12">
@@ -727,7 +727,7 @@
 										<div class="row">
 											<div class="col-sm-12">
 												<div class="form-group">
-													<textarea class="form-control" rows="8" id="comment" placeholder="Message" ></textarea>
+													<textarea class="form-control" rows="8" id="comment" placeholder="Message" name = "msg></textarea>
 												</div><!--/.form-group-->
 											</div><!--/.col-->
 										</div><!--/.row-->
@@ -742,31 +742,25 @@
 									<p id="response-message" style="color:green;"></p>
 
     <script>
-        document.getElementById('contact-form').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            
-            const formData = {
-                name: event.target.name.value,
-                email: event.target.email.value,
-                subject: event.target.subject.value,
-                message: event.target.message.value
-            };
+       const handleSubmit = (event) => {
+  event.preventDefault();
 
-            try {
-                const response = await fetch('/contact', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
+  const myForm = event.target;
+  const formData = new FormData(myForm);
+  
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => console.log("Form successfully submitted"))
+    .catch((error) => alert(error));
+};
 
-                const result = await response.json();
-                document.getElementById('response-message').textContent = result.message;
-                document.getElementById('contact-form').reset();
-            } catch (error) {
-                document.getElementById('response-message').textContent = 'Error submitting the form.';
-                console.error('Error:', error);
-            }
-        });
+document
+  .querySelector("form")
+  .addEventListener("submit", handleSubmit);
+
     </script>
 								</div><!--/.contact-form-->
 			
