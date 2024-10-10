@@ -852,4 +852,9 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
     0%   {bottom:0px;}
     100%  {bottom:7px;}
 }
+/* video display */
+.video-container {
+    text-align: center; /* Center the video */
+    margin-top: 20px; /* Add some space at the top */
+  }
 /*========================Thank you=================
