@@ -124,4 +124,11 @@ $(document).ready(function(){
         });
 
 });	
+
+window.onload = function() {
+    // Set a timeout to delay video playback for 30 seconds (30000 milliseconds)
+    setTimeout(function() {
+      document.getElementById('myVideo').play();
+    }, 30000);
+  };
 	
