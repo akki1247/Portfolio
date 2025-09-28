@@ -2,10 +2,10 @@
 //
 // Template name : Bootsnav - Multi Purpose Header
 // Categorie : Bootstrap Menu in CSS
-// Author : adamnurdin01
-// Version : v.1.2
-// Created : 2016-06-02
-// Last update : 2016-10-19
+// Author : Akki1247
+// Version : v.1.1
+// Created : 2025-09-28
+// Last update : 2025-09-28
 //
 // ------------------------------------------------------------------------------ //
 

@@ -2,7 +2,7 @@ $(document).ready(function(){
 	"use strict";
     
         /*==================================
-* Author        : "ThemeSine"
+* Author        : "Akki1247"
 * Template Name : Khanas HTML Template
 * Version       : 1.0
 ==================================== */
