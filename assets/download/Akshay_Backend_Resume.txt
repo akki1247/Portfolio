@@ -1,0 +1,44 @@
+Akshay Shiralsheth
+Backend Developer — Node.js | PostgreSQL, MySQL, Cosmos DB | API Integrations | Payload CMS
+
+Phone: 7741853466
+Email: shiralshethakshay@gmail.com
+Location: Pune, India
+
+Professional Summary:
+Backend Developer with experience building scalable server-side applications using Node.js and Express. Skilled in database schema design and optimization, API integrations (GitHub, Gmail), workflow automation (n8n), and working with headless CMS (Payload CMS). Knowledgeable in containerization and CI/CD.
+
+Core Skills:
+- Node.js / Express
+- PostgreSQL
+- MySQL
+- Azure Cosmos DB
+- REST & GraphQL API design
+- Payload CMS
+- n8n / Integration workflows
+- Docker, Git
+- Testing & Observability
+
+Experience:
+Coditude — Backend Developer (2024 — Present)
+- Designed and implemented REST APIs with Node.js and Express.
+- Implemented optimized queries and schemas in PostgreSQL and MySQL.
+- Integrated third-party APIs and automated workflows using n8n.
+
+Personal / Freelance Projects (2021 — 2024)
+- Labor Supply Chain Platform — React + Express + MySQL.
+- Order Cart Handling Prototype — React, front-end state management.
+
+Education:
+- Master of Computer Application — PES's Modern College of Arts, Science and Commerce (2023-2025)
+- Bachelor of Computer Science — PES's Modern College of Arts, Science and Commerce (2020-2023)
+
+Certifications:
+- Node.js Backend Development — Coursera (Jun 2025)
+- Databases: PostgreSQL & MySQL — Udemy (Apr 2025)
+- API Integrations & Automation (n8n) — Self-study (Aug 2025)
+- Payload CMS Integration — Self-study (Jul 2025)
+
+Links:
+https://github.com/akki1247
+https://www.linkedin.com/in/akshay-shiralsheth-65b6391a6
